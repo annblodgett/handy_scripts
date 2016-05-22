@@ -1,5 +1,6 @@
 # Calculator for CIDR based IPv4 Subnetting
-# Returns the Network Mask, Network Address, First Host Address, Last host Address, Broadcast Address, Number of Hosts. Each is in dot decimal form. Values can be anywhere from 0.0.0.0 through 255.255.255.255.
+'''Returns the Network Mask, Network Address, First Host Address, Last host Address, Broadcast Address, Number of Hosts.
+Each is in dot decimal form. Values can be anywhere from 0.0.0.0 through 255.255.255.255.'''
 
 #---------- BEGIN CODE ----------#
 #--Import needed modules--#
