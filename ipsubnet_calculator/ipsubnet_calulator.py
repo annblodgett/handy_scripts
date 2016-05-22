@@ -1,4 +1,4 @@
-# Calculator for CIDR based IP Subnetting
+# Calculator for CIDR based IPv4 Subnetting
 # Returns the Network Mask, Network Address, First Host Address, Last host Address, Broadcast Address, Number of Hosts. Each is in dot decimal form. Values can be anywhere from 0.0.0.0 through 255.255.255.255.
 
 #---------- BEGIN CODE ----------#
@@ -22,30 +22,30 @@
 		# multiply (wnValue+1) by the mdf. Then -1 from that value.  This becomes the last.broadcastValue.
 	# Create cases based on the workingOctet value. naXOct stands for network address (ordinal number) Octet. 
 		# If workingOctet = 1 naSecondOct, naThirdOct,and naFourthOct should be 0. naFirstOct is determined by the calcValue function. It is the net.firstValue. 
-		# If workingOctet = 2 naFirstOct should be 255 while naThirdOct and naFourthOct should be 0. naSecondOct is determined by the calcValue function . It is the net.firstValue. 
-		# If workingOctet = 3 naFirstOct and naSecondOct should be 255 while naFourthOct should be 0. naThirdOct is determined by the calcValue function. It is the net.firstValue. 
-		# If workingOctet = 4 naFirstOct, naSecondOct and naThirdOct are all 255. naFourthOct is determined by the calcValue function. It is the net.firstValue. 
+		# If workingOctet = 2 naFirstOct should be the user entered values for firstOct while naThirdOct and naFourthOct should be 0. naSecondOct is determined by the calcValue function . It is the net.firstValue. 
+		# If workingOctet = 3 naFirstOct and naSecondOct should be user entered values for firstOct and secondOct while naFourthOct should be 0. naThirdOct is determined by the calcValue function. It is the net.firstValue. 
+		# If workingOctet = 4 naFirstOct, naSecondOct and naThirdOct are all user entered values for firstOct, secondOct, and thirdoct. naFourthOct is determined by the calcValue function. It is the net.firstValue. 
 	# Print the Network Address to console. It should be in the form naFirstOct.naSecondOct.naThirdOct.naFourthOct.
 # Return the First Host Address
 	# Create cases based on the workingOctet value. fhXOct stands for first host (ordinal number) Octet. 
-		# If workingOctet = 1 fhSecondOct, fhThirdOct,and fhFourthOct should be 0 should be 1. fhFirstOct is determined by the calcValue function. It is the net.firstValue. 
-		# If workingOctet = 2 fhFirstOct should be 255 while fhThirdOct should be 0 and fhFourthOct should be 1. fhSecondOct is determined by the calcValue function . It is the net.firstValue. 
-		# If workingOctet = 3 fhFirstOct and fhSecondOct should be 255 while fhFourthOct should be 1. fhThirdOct is determined by the calcValue function. It is the net.firstValue. 
-		# If workingOctet = 4 fhFirstOct, fhSecondOct and fhThirdOct are all 255. fhFourthOct is determined by the calcValue function. (It is the net.firstValue+1)
+		# If workingOctet = 1 fhSecondOct, fhThirdOct should be 0,and fhFourthOct should be 1. fhFirstOct is determined by the calcValue function. It is the net.firstValue. 
+		# If workingOctet = 2 fhFirstOct should should be the user entered values for firstOct while fhThirdOct should be 0 and fhFourthOct should be 1. fhSecondOct is determined by the calcValue function . It is the net.firstValue. 
+		# If workingOctet = 3 fhFirstOct and fhSecondOct should be should be the user entered values for firstOct abd secondOct while fhFourthOct should be 1. fhThirdOct is determined by the calcValue function. It is the net.firstValue. 
+		# If workingOctet = 4 fhFirstOct, fhSecondOct and fhThirdOct are all should be the user entered values for firstOct, secondOct and thirdOct. fhFourthOct is determined by the calcValue function. (It is the net.firstValue+1)
 	# Print the First Host Address to console. It should be in the form fhFirstOct.fhSecondOct.fhThirdOct.fhFourthOct.
 # Return the Last host Address
 	# Create cases based on the workingOctet value. lhXOct stands for last host (ordinal number) Octet. 
 		# If workingOctet = 1 lhSecondOct, lhThirdOct,should be 255 lhFourthOct should be 254. lhFirstOct is determined by the calcValue function. It is the last.broadcastValue. 
-		# If workingOctet = 2 lhFirstOct and  lhThirdOct should be 255 and lhFourthOct should be 254. lhSecondOct is determined by the calcValue function . It is the last.broadcastValue.  
-		# If workingOctet = 3 lhFirstOct and lhSecondOct should be 255 while lhFourthOct should be 254. lhThirdOct is determined by the calcValue function. It is the last.broadcastValue. 
-		# If workingOctet = 4 lhFirstOct, lhSecondOct and lhThirdOct are all 255. lhFourthOct is determined by the calcValue function. It is the last.broadcastValue.-1
+		# If workingOctet = 2 lhFirstOct the user entered values for firstOct and  lhThirdOct should be 255 and lhFourthOct should be 254. lhSecondOct is determined by the calcValue function . It is the last.broadcastValue.  
+		# If workingOctet = 3 lhFirstOct and lhSecondOct should be the user entered values for firstOct and secondOct while lhFourthOct should be 254. lhThirdOct is determined by the calcValue function. It is the last.broadcastValue. 
+		# If workingOctet = 4 lhFirstOct, lhSecondOct and lhThirdOct are all the user entered values for firstOct, secondOct and thirdoct. lhFourthOct is determined by the calcValue function. It is the last.broadcastValue.-1
 	# Print the Last host Address to console. It should be in the form lhFirstOct.lhSecondOct.lhThirdOct.lhFourthOct.
 # Return the Broadcast Address
 	# Create cases based on the workingOctet value. baXOct stands for broadcast address (ordinal number) Octet. 
 		# If workingOctet = 1 baSecondOct, baThirdOct and baFourthOct should be 255. baFirstOct is determined by the calcValue function. It is the last.broadcastValue. 
-		# If workingOctet = 2 baFirstOct and  baThirdOct and baFourthOct should be 255. baSecondOct is determined by the calcValue function . It is the last.broadcastValue.  
-		# If workingOctet = 3 baFirstOct and baSecondOct and baFourthOct should be 255. baThirdOct is determined by the calcValue function. It is the last.broadcastValue. 
-		# If workingOctet = 4 baFirstOct, baSecondOct and baThirdOct are all 255. baFourthOct is determined by the calcValue function. It is the last.broadcastValue.
+		# If workingOctet = 2 baFirstOct the user entered values for firstOct and  baThirdOct and baFourthOct should be 255. baSecondOct is determined by the calcValue function . It is the last.broadcastValue.  
+		# If workingOctet = 3 baFirstOct and baSecondOct the user entered values for firstOct and secondOct and baFourthOct should be 255. baThirdOct is determined by the calcValue function. It is the last.broadcastValue. 
+		# If workingOctet = 4 baFirstOct, baSecondOct and baThirdOct are all the user entered values for firstOct, secondOct, and thirdOct. baFourthOct is determined by the calcValue function. It is the last.broadcastValue.
 	# Print the Broadcast Address to console. It should be in the form baFirstOct.baSecondOct.baThirdOct.baFourthOct.
 # Return the Number of Hosts
 	# Calculate number of hosts.
