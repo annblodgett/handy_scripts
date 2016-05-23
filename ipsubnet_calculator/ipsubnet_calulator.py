@@ -42,7 +42,6 @@ if cidrValue > 8:
 	#To get the workingOctet take the whole # part of the cidrValue/8. Each full whole number (1,2 etc.) represents a full octet so octetValue=1 is 255.x.x.x  working in the 2nd octet. If octetValue is 2 we are working in the 3rd octet which is 255.255 etc. 
 	# The workingOctet value is n+1 where n is the whole # (int) part of the cidrValue/8
 	workingOctet=int(cidrValue/8)+1
-	print "We are working in octet number "+str(workingOctet)+"."
 	# Then to get the mdf take the cidrValue%8 (remainder) and the number should be an int value between 1-7 which corresponds to mdf options are 128,64,32,16,8,2 and 1 descending.
 	if cidrValue%8==1:
 		mdf=128
@@ -60,7 +59,6 @@ if cidrValue > 8:
 		mdf=2
 	if cidrValue%8==8:
 		mdf==1
-	print "mdf is "+ str(mdf)+"."
 # Define the calcValue function.
 # First the workingOctet number cooresponds to the firstOct, secondOct, thirdOct and fourthOct respectively. That user entered value then becomes the startNumber.
 def calcValue(n):
