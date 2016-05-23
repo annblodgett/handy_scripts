@@ -37,8 +37,6 @@ if cidrValue < 8:
 		mdf=2
 	if cidrValue==8:
 		mdf==1
-	print "mdf is "+ str(mdf)+"."
-	print "we are working in octet number "+str(workingOctet)+"."
 # If the cidrValue is greater than 8 
 if cidrValue > 8:
 	#To get the workingOctet take the whole # part of the cidrValue/8. Each full whole number (1,2 etc.) represents a full octet so octetValue=1 is 255.x.x.x  working in the 2nd octet. If octetValue is 2 we are working in the 3rd octet which is 255.255 etc. 
