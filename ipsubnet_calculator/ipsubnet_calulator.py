@@ -126,7 +126,7 @@ def firstHostAddress():
 		fhSecondOct =0
 		fhThirdOct =0
 		fhFourthOct =1
-		print "The network address is "+str(fhFirstOct)+ "."+str(fhSecondOct)+"."+str(fhThirdOct)+"."+str(fhFourthOct)+" "
+		print "The first host address is "+str(fhFirstOct)+ "."+str(fhSecondOct)+"."+str(fhThirdOct)+"."+str(fhFourthOct)+" "
 	# If workingOctet = 2 fhFirstOct should should be the user entered values for firstOct while fhThirdOct should be 0 and fhFourthOct should be 1. fhSecondOct is determined by the calcValue function . It is the net.firstValue. 
 	if workingOctet ==2:
 		calcValue(2)
@@ -134,7 +134,7 @@ def firstHostAddress():
 		fhSecondOct =netFirstValue
 		fhThirdOct =0
 		fhFourthOct =1
-		print "The network address is "+str(fhFirstOct)+ "."+str(fhSecondOct)+"."+str(fhThirdOct)+"."+str(fhFourthOct)+" "
+		print "The first host address is "+str(fhFirstOct)+ "."+str(fhSecondOct)+"."+str(fhThirdOct)+"."+str(fhFourthOct)+" "
 	# If workingOctet = 3 fhFirstOct and fhSecondOct should be should be the user entered values for firstOct abd secondOct while fhFourthOct should be 1. fhThirdOct is determined by the calcValue function. It is the net.firstValue. 
 	if workingOctet ==3:
 		calcValue(3)
@@ -142,7 +142,7 @@ def firstHostAddress():
 		fhSecondOct =secondOct
 		fhThirdOct =netFirstValue
 		fhFourthOct =1
-		print "The network address is "+str(fhFirstOct)+ "."+str(fhSecondOct)+"."+str(fhThirdOct)+"."+str(fhFourthOct)+" "
+		print "The first host address is "+str(fhFirstOct)+ "."+str(fhSecondOct)+"."+str(fhThirdOct)+"."+str(fhFourthOct)+" "
 	# If workingOctet = 4 fhFirstOct, fhSecondOct and fhThirdOct are all should be the user entered values for firstOct, secondOct and thirdOct. fhFourthOct is determined by the calcValue function. (It is the net.firstValue+1)
 	if workingOctet ==4:
 		calcValue(4)
@@ -200,7 +200,7 @@ def broadcastAddress ():
 		lhSecondOct=255
 		lhThirdOct =255
 		lhFourthOct=255
-		print "The last host address is "+str(lhFirstOct)+ "."+str(lhSecondOct)+"."+str(lhThirdOct)+"."+str(lhFourthOct)+" "
+		print "The broadcast address is "+str(lhFirstOct)+ "."+str(lhSecondOct)+"."+str(lhThirdOct)+"."+str(lhFourthOct)+" "
 	# If workingOctet = 2 baFirstOct the user entered values for firstOct and  baThirdOct and baFourthOct should be 255. baSecondOct is determined by the calcValue function . It is the last.broadcastValue.  
 	if workingOctet ==2:
 		calcValue(2)
@@ -208,7 +208,7 @@ def broadcastAddress ():
 		lhSecondOct=lastBroadcastValue
 		lhThirdOct=255
 		lhFourthOct=255
-		print "The last host address is "+str(lhFirstOct)+ "."+str(lhSecondOct)+"."+str(lhThirdOct)+"."+str(lhFourthOct)+" "	
+		print "The broadcast address is "+str(lhFirstOct)+ "."+str(lhSecondOct)+"."+str(lhThirdOct)+"."+str(lhFourthOct)+" "	
 	# If workingOctet = 3 baFirstOct and baSecondOct the user entered values for firstOct and secondOct and baFourthOct should be 255. baThirdOct is determined by the calcValue function. It is the last.broadcastValue. 
 	if workingOctet ==3:
 		calcValue(3)
@@ -216,7 +216,7 @@ def broadcastAddress ():
 		lhSecondOct=secondOct
 		lhThirdOct=lastBroadcastValue
 		lhFourthOct=255
-		print "The last host address is "+str(lhFirstOct)+ "."+str(lhSecondOct)+"."+str(lhThirdOct)+"."+str(lhFourthOct)+" "	
+		print "The broadcast address is "+str(lhFirstOct)+ "."+str(lhSecondOct)+"."+str(lhThirdOct)+"."+str(lhFourthOct)+" "	
 	# If workingOctet = 4 baFirstOct, baSecondOct and baThirdOct are all the user entered values for firstOct, secondOct, and thirdOct. baFourthOct is determined by the calcValue function. It is the last.broadcastValue.
 	if workingOctet ==4:
 		calcValue(4)
